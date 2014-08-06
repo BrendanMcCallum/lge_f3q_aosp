@@ -24,9 +24,9 @@ BOARD_KERNEL_CMDLINE         := androidboot.hardware=fx3q user_debug=31 vmalloc=
 BOARD_KERNEL_BASE            := 0x80200000
 BOARD_MKBOOTIMG_ARGS         := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE        := 2048
-TARGET_PREBUILT_KERNEL := device/moto/condor/kernel
+TARGET_PREBUILT_KERNEL       := device/lge/f3q/kernel
 TARGET_KERNEL_SOURCE         := kernel/lge/f3q
-#TARGET_KERNEL_CONFIG         := cm_f3q_defconfig
+TARGET_KERNEL_CONFIG         := fx3q_tmo_us_defconfig
 #TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_SPECIFIC_HEADER_PATH := device/lge/f3q/include
 TARGET_NO_INITLOGO := true
