@@ -20,10 +20,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/lge/f3q/f3q-vendor.mk)
 
-LOCAL_KERNEL := device/lge/f3q/kernel
-
-PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel
+LOCAL_PATH := device/lge/fx3q
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
 
 
 # Permissions
